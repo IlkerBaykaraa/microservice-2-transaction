@@ -1,0 +1,9 @@
+{
+  "name": "product-order-2-transaction",
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ]
+}
+
