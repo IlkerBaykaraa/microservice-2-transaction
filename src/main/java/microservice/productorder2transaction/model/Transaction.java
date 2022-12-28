@@ -10,16 +10,44 @@ import java.time.LocalDateTime;
 @Table(name = "transaction")
 public class Transaction {
 
+    private long id;
+    private Long userId;
+    private Long productId;
+    private LocalDateTime transactionTime;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
     @Column(name = "user_id",nullable = false)
-    private Long userId;
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
     @Column(name = "product_id",nullable = false)
-    private Long productId;
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
+    }
+
 
     @Column(name = "transaction_time")
-    private LocalDateTime transactionTime;
+    public LocalDateTime getTransactionTime() {
+        return transactionTime;
+    }
+
+    public void setTransactionTime(LocalDateTime transactionTime) {
+        this.transactionTime = transactionTime;
+    }
 }

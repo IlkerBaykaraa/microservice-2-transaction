@@ -27,4 +27,10 @@ public class TransactionService implements ITransactionService{
         transactionRepository.deleteById(transactionId);
     }
 
+    @Override
+    public List<Transaction> getAll() {
+        return transactionRepository.findAll();
+    }
+
+
 }

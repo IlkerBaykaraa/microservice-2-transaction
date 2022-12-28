@@ -26,4 +26,9 @@ public class TransactionController
         transactionService.deleteTransaction(transactionId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping
+    public ResponseEntity<?> getAllTransaction(){
+        return ResponseEntity.ok(transactionService.getAll());
+    }
 }
